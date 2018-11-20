@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Team } from '../team';
 import { TEAMS } from '../mock-teams';
 
 @Component({
@@ -9,12 +8,7 @@ import { TEAMS } from '../mock-teams';
 })
 export class TeamsComponent implements OnInit {
 
-//   team: Team = {
-//       id: 1,
-//       name: "Cleveland Cavaliers"
-//   };
-
-  beams = TEAMS;
+  teams = TEAMS;
 
   constructor() { }
 
