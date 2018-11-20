@@ -7,5 +7,12 @@
   <img width="300" alt="Dragons" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3yivDEG2Mu1bU5zInhVXOvWvswN2JL3XBKYd3f_-5uZvWfDHl">
 </div>
 <h2>Website currently under construction, please come back later!</h2>
-
+<table>
+	<tr>
+		<th>Team Name</th>
+	</tr>
+	<tr ng-repeat="team in teams">
+		<td>{{ team }}</td>
+	</tr>
+</table>
 <router-outlet></router-outlet>
