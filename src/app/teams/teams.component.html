@@ -1,0 +1,13 @@
+
+<div *ngIf="beams.length > 0">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Team Name</th>
+        </tr>
+        <tr *ngFor="let team of beams">
+            <td>{{ team.id }}</td>
+            <td>{{ team.name }}</td>
+        </tr>
+    </table>
+</div>
