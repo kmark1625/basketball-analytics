@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TeamsComponent } from './teams/teams.component'
+import { TeamsComponent } from './teams/teams.component';
+import { TitleComponent } from './title/title.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    TeamsComponent
+    TeamsComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
