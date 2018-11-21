@@ -7,7 +7,7 @@ export const TEAMS: Team[] = [
     { id: 4, name: 'Charlotte Hornets', logo: 'assets/img/hornets.svg' },
     { id: 5, name: 'Chicago Bulls', logo: 'assets/img/bulls.svg' },
     { id: 6, name: 'Cleveland Cavaliers', logo: 'assets/img/cavaliers.svg' },
-    { id: 7, name: 'Dallas Mavericks', logo: 'assets/img/marvericks.svg' },
+    { id: 7, name: 'Dallas Mavericks', logo: 'assets/img/mavericks.svg' },
     { id: 8, name: 'Denver Nuggets', logo: 'assets/img/nuggets.svg' },
     { id: 9, name: 'Detroit Pistons', logo: 'assets/img/pistons.svg' },
     { id: 10, name: 'Golden State Warriors', logo: 'assets/img/warriors.svg' },
