@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TeamsComponent } from './teams/teams.component';
-import { TitleComponent } from './title/title.component'
+import { TitleComponent } from './title/title.component';
+import { TrackingComponent } from './tracking/tracking.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamsComponent,
-    TitleComponent
+    TitleComponent,
+    TrackingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
