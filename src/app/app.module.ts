@@ -9,13 +9,15 @@ import { TeamsComponent } from './teams/teams.component';
 import { TitleComponent } from './title/title.component';
 import { TrackingComponent } from './tracking/tracking.component'
 import { FormsModule } from '@angular/forms';
+import { TransactionFormComponent } from './transaction-form/transaction-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamsComponent,
     TitleComponent,
-    TrackingComponent
+    TrackingComponent,
+    TransactionFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<form #userForm="ngForm">
+    <table class="table-responsive table-bordered table-striped">
+        <tr>
+            <th>Date</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Ratio</th>
+            <th>Units</th>
+            <th>Spread</th>
+            <th>Outcome</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td><input class="form-control" placeholder="November 20, 2018" name="date" id="date" [(ngModel)]="transaction.date" type="text" required></td>
+            <td>
+                <select class="form-control" name="firstSelectedTeam" [(ngModel)]="transaction.team1" required>
+                    <option *ngFor="let team of teams" [ngValue]="team">{{team.name}}</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-control" name="secondSelectedTeam" [(ngModel)]="transaction.team2" required>
+                    <option *ngFor="let team of teams" [ngValue]="team">{{team.name}}</option>
+                </select>
+            </td>
+            <td><input class="form-control" name="ratio" id="ratio" [(ngModel)]="transaction.ratio" type="text" required></td>
+            <td><input class="form-control" name="units" id="units" [(ngModel)]="transaction.units" type="text" required></td>
+            <td><input class="form-control" name="spread" id="spread" [(ngModel)]="transaction.spread" type="text" required></td>
+            <td>
+                <select class="form-control" name="outcome" id="outcome" [(ngModel)]="transaction.outcome">
+                    <option>Win</option>
+                    <option>Lose</option>
+                </select>
+            </td>
+            <td><input class="form-control" name="result" id="result" [(ngModel)]="transaction.result" type="text" required></td>
+        </tr>
+    </table>
+    <button class="button" (click)="addTransaction()">Add Row</button>
+</form>

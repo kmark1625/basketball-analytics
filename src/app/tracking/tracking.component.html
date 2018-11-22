@@ -1,11 +1,11 @@
 
-<div>
+<div *ngIf="transactions">
     <table class="table-responsive table-bordered table-striped">
         <tr>
             <th>Date</th>
             <th>Team 1</th>
             <th>Team 2</th>
-            <th>Amount</th>
+            <th>Ratio</th>
             <th>Units</th>
             <th>Spread</th>
             <th>Outcome</th>
@@ -15,61 +15,13 @@
             <td>{{transaction.date}}</td>
             <td><img src="{{transaction.team1.logo}}" /></td>
             <td><img src="{{transaction.team2.logo}}" /></td>
-            <td>{{transaction.amount}}</td>
+            <td>{{transaction.ratio}}</td>
             <td>{{transaction.units}}</td>
             <td>{{transaction.spread}}</td>
             <td>{{transaction.outcome}}</td>
             <td>{{transaction.result}}</td>
         </tr>
-        <!-- <tr>
-            <td>November 20, 2018</td>
-            <td>
-                <select class="form-control" name="firstSelectedTeam" [(ngModel)]="selectedTeam1" required>
-                    <option *ngFor="let team of teams" [value]="team">{{team.name}}</option>
-                </select>
-            </td>
-            <td>
-                <select class="form-control" name="secondSelectedTeam" [(ngModel)]="selectedTeam2">
-                    <option *ngFor="let team of teams" [ngValue]="team">{{team.name}}</option>
-                </select>
-            </td>
-            <td><input/></td>
-            <td><input/></td>
-            <td><input/></td>
-            <td>Win</td>
-            <td>+500</td>
-        </tr> -->
     </table>
-    <!-- <button class="button">Add Row</button>
-    <div *ngIf="selectedTeam1">
-        <p>{{selectedTeam1.name}}</p>
-    </div>
 
-    <form #userForm="ngForm">
-        <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input class="form-control" name="firstName" id="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" type="text">
-        </div>
-        <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input class="form-control" name="lastName" id="lastName" type="text">
-        </div>
-        <div class="form-group">
-            <label for="role">User Role</label>
-            <select class="form-control" name="role" id="role">
-            <option>Guest</option>
-            <option>Admin</option>
-            <option>Owner</option>
-            <option>Operator</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="notes">Additional Notes</label>
-            <textarea class="form-control" name="notes" id="notes" rows="6" placeholder="Add additional notes here."></textarea>
-        </div>
-    </form>
-
-    <div class="d-flex w-100">
-        <button class="btn pull-right btn-primary" (click)="logForm()">Log Form</button>
-    </div> -->
+    <app-transaction-form></app-transaction-form>
 </div>
