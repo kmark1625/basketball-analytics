@@ -11,6 +11,8 @@ import { TrackingComponent } from './tracking/tracking.component'
 import { FormsModule } from '@angular/forms';
 import { TransactionFormComponent } from './transaction-form/transaction-form.component';
 
+import { MatTableModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { TransactionFormComponent } from './transaction-form/transaction-form.co
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

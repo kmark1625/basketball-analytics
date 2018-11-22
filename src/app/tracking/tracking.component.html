@@ -1,27 +1,49 @@
 
-<div *ngIf="transactions">
-    <table class="table-responsive table-bordered table-striped">
-        <tr>
-            <th>Date</th>
-            <th>Team 1</th>
-            <th>Team 2</th>
-            <th>Ratio</th>
-            <th>Units</th>
-            <th>Spread</th>
-            <th>Outcome</th>
-            <th>Result</th>
-        </tr>
-        <tr *ngFor="let transaction of transactions">
-            <td>{{transaction.date}}</td>
-            <td><img src="{{transaction.team1.logo}}" /></td>
-            <td><img src="{{transaction.team2.logo}}" /></td>
-            <td>{{transaction.ratio}}</td>
-            <td>{{transaction.units}}</td>
-            <td>{{transaction.spread}}</td>
-            <td>{{transaction.outcome}}</td>
-            <td>{{transaction.result}}</td>
-        </tr>
-    </table>
+<div *ngIf="dataSource">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Date </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.date}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="team1">
+            <th mat-header-cell *matHeaderCellDef> Team 1 </th>
+            <td mat-cell *matCellDef="let transaction"> <img src="{{transaction.team1.logo}}" /> </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="team2">
+            <th mat-header-cell *matHeaderCellDef> Team 2 </th>
+            <td mat-cell *matCellDef="let transaction"> <img src="{{transaction.team2.logo}}" /> </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="ratio">
+            <th mat-header-cell *matHeaderCellDef> Ratio </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.ratio}} </td>
+        </ng-container>
 
+        <ng-container matColumnDef="units">
+            <th mat-header-cell *matHeaderCellDef> Units </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.units}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="spread">
+            <th mat-header-cell *matHeaderCellDef> Spread </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.spread}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="outcome">
+            <th mat-header-cell *matHeaderCellDef> Outcome </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.outcome}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="result">
+            <th mat-header-cell *matHeaderCellDef> Result </th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.result}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
     <app-transaction-form></app-transaction-form>
 </div>
