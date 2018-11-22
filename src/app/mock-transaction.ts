@@ -3,7 +3,7 @@ import { TEAMS } from './mock-teams';
 
 export const TRANSACTIONS: Transaction[] = [
     { 
-        date: "November 13, 2018", 
+        date: new Date("November 13, 2018"), 
         team1: TEAMS[13], 
         team2: TEAMS[1],
         ratio: -110,
@@ -13,7 +13,7 @@ export const TRANSACTIONS: Transaction[] = [
         result: 5
     },
     {
-        date: "November 15, 2018",
+        date: new Date("November 15, 2018"),
         team1: TEAMS[22],
         team2: TEAMS[7],
         ratio: -110,

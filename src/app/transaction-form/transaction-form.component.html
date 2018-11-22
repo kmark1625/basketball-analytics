@@ -11,7 +11,16 @@
             <th>Result</th>
         </tr>
         <tr>
-            <td><input class="form-control" placeholder="November 20, 2018" name="date" id="date" [(ngModel)]="transaction.date" type="text" required></td>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <input matInput [matDatepicker]="picker" name="date" placeholder="Choose a date" [(ngModel)]="transaction.date">
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+            </td>
             <td>
                 <select class="form-control" name="firstSelectedTeam" [(ngModel)]="transaction.team1" required>
                     <option *ngFor="let team of teams" [ngValue]="team">{{team.name}}</option>
@@ -26,7 +35,7 @@
             <td><input class="form-control" name="units" id="units" [(ngModel)]="transaction.units" type="text" required></td>
             <td><input class="form-control" name="spread" id="spread" [(ngModel)]="transaction.spread" type="text" required></td>
             <td>
-                <select class="form-control" name="outcome" id="outcome" [(ngModel)]="transaction.outcome">
+                <select class="form-control" name="outcome" id="outcome" [(ngModel)]="transaction.outcome" required>
                     <option>Win</option>
                     <option>Lose</option>
                 </select>

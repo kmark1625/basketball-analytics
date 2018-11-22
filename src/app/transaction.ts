@@ -4,7 +4,7 @@ export class Transaction {
 
     constructor() {}
 
-    date: string;
+    date: Date;
     team1: Team;
     team2: Team;
     ratio: number;

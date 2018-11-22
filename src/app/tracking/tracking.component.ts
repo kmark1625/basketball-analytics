@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TEAMS } from '../mock-teams';
 import { Team } from '../team';
-import { User } from '../user';
 import { TransactionService } from '../transaction.service';
 import { Transaction } from '../transaction';
 
@@ -37,12 +36,15 @@ export class TrackingComponent implements OnInit {
   transactions: Transaction[];
   dataSource: Transaction[];
 
-    user: User = {
-        firstName: 'New',
-        lastName: 'User',
-        role: 'Guest',
-        notes: undefined
-    };
+  displayedColumns: string[] = [
+    'date',
+    'team1',
+    'team2',
+    'ratio',
+    'units',
+    'spread',
+    'outcome',
+    'result'];
 
   constructor(private transactionService: TransactionService) { }
 
@@ -54,15 +56,4 @@ export class TrackingComponent implements OnInit {
       this.transactionService.getTransactions()
         .subscribe(transactions => this.dataSource = transactions)
   }
-
-    displayedColumns: string[] = [
-        'date', 
-        'team1', 
-        'team2', 
-        'ratio',
-        'units',
-        'spread',
-        'outcome',
-        'result'];
-    // dataSource = ELEMENT_DATA;
 }

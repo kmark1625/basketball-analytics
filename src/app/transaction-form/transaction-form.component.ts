@@ -19,8 +19,9 @@ export class TransactionFormComponent implements OnInit {
   }
 
   addTransaction() {
+      console.log(this.transaction.date);
       var transaction = new Transaction();
-      transaction.date = "November 13, 2018";
+      transaction.date = new Date("November 13, 2018");
       transaction.team1 = this.transaction.team1;
       transaction.team2 = this.transaction.team2;
       transaction.ratio = this.transaction.ratio;
@@ -30,9 +31,4 @@ export class TransactionFormComponent implements OnInit {
       transaction.result = 5;
       this.transactionService.transactions.push(transaction);
   }
-
-    @ViewChild('userForm') userForm: ElementRef;
-    logForm() {
-        console.log(this.userForm);
-    }
 }
