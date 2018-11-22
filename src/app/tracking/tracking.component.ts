@@ -30,7 +30,8 @@ export class TrackingComponent implements OnInit {
   }
 
   getTransactions(): void {
-      this.transactions = this.transactionService.getTransactions();
+      this.transactionService.getTransactions()
+        .subscribe(transactions => this.transactions = transactions)
   }
 
 }
