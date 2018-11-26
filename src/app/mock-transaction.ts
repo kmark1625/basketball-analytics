@@ -3,23 +3,23 @@ import { TEAMS } from './mock-teams';
 
 export const TRANSACTIONS: Transaction[] = [
     { 
-        date: new Date("November 13, 2018"), 
-        team1: TEAMS[13], 
-        team2: TEAMS[1],
+        date: new Date("November 24, 2018"), 
+        team1: TEAMS[26], 
+        team2: TEAMS[16],
         ratio: -110,
-        units: 5,
-        spread: -3.5,
+        units: 10,
+        spread: 9.5,
         outcome: "win",
-        result: 5
+        result: 10
     },
     {
         date: new Date("November 15, 2018"),
-        team1: TEAMS[22],
-        team2: TEAMS[7],
+        team1: TEAMS[25],
+        team2: TEAMS[9],
         ratio: -110,
-        units: 3,
-        spread: 1.5,
-        outcome: "loss",
-        result: -3.3
+        units: 10,
+        spread: 6,
+        outcome: "win",
+        result: 10
     }
 ];
