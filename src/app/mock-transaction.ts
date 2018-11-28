@@ -13,12 +13,32 @@ export const TRANSACTIONS: Transaction[] = [
         result: 10
     },
     {
-        date: new Date("November 15, 2018"),
+        date: new Date("November 14, 2018"),
         team1: TEAMS[25],
         team2: TEAMS[9],
         ratio: -110,
         units: 10,
         spread: 6,
+        outcome: "win",
+        result: 10
+    },
+    {
+        date: new Date("November 26, 2018"),
+        team1: TEAMS[1],
+        team2: TEAMS[18],
+        ratio: -110,
+        units: 10,
+        spread: 2,
+        outcome: "win",
+        result: 10
+    },
+    {
+        date: new Date("November 27, 2018"),
+        team1: TEAMS[27],
+        team2: TEAMS[14],
+        ratio: -110,
+        units: 10,
+        spread: -6,
         outcome: "win",
         result: 10
     }
