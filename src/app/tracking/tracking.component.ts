@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { TEAMS } from '../mock-teams';
 import { Team } from '../team';
 import { Transaction } from '../transaction';
 import { TransactionStore } from '../transaction.store';
+import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-tracking',
@@ -14,7 +15,7 @@ export class TrackingComponent implements OnInit {
   selectedTeam2: Team;
   teams = TEAMS;
   transactions: Transaction[];
-  dataSource: Transaction[];
+  dataSource = new MatTableDataSource<Transaction>();
 
   displayedColumns: string[] = [
     'date',
@@ -26,7 +27,9 @@ export class TrackingComponent implements OnInit {
     'outcome',
     'result'];
 
-  constructor(private transactionStore: TransactionStore) { }
+  constructor(
+      private transactionStore: TransactionStore,
+      private changeDetectorRefs: ChangeDetectorRef) { }
 
   ngOnInit() {
       this.getTransactions();
@@ -36,7 +39,7 @@ export class TrackingComponent implements OnInit {
       this.transactionStore.transactions$
         .subscribe(transactions => {
             console.log("Receiving new transactions: " + transactions);
-            this.dataSource = transactions;
+            this.dataSource.data = transactions;
         })
   }
 }

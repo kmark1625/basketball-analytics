@@ -13,7 +13,7 @@ export const TRANSACTIONS: Transaction[] = [
         result: 10
     },
     {
-        date: new Date("November 14, 2018"),
+        date: new Date("November 24, 2018"),
         team1: TEAMS[25],
         team2: TEAMS[9],
         ratio: -110,
@@ -38,8 +38,18 @@ export const TRANSACTIONS: Transaction[] = [
         team2: TEAMS[14],
         ratio: -110,
         units: 10,
-        spread: -6,
+        spread: -5.5,
         outcome: "win",
         result: 10
+    },
+    {
+        date: new Date("November 28, 2018"),
+        team1: TEAMS[23],
+        team2: TEAMS[12],
+        ratio: -110,
+        units: 10,
+        spread: -11.5,
+        outcome: "loss",
+        result: -11
     }
 ];

@@ -44,7 +44,7 @@ export class TransactionFormComponent implements OnInit {
 
   addTransaction() {
       var transaction = new Transaction();
-      transaction.date = new Date("November 13, 2018");
+      transaction.date = this.transaction.date;
       transaction.team1 = this.transaction.team1;
       transaction.team2 = this.transaction.team2;
       transaction.ratio = this.transaction.ratio;

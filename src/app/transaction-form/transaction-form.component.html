@@ -44,7 +44,7 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table> -->
-    <!-- <table class="table-responsive table-bordered table-striped">
+    <table class="table-responsive table-bordered table-striped">
         <tr>
             <th>Date</th>
             <th>Team 1</th>
@@ -88,5 +88,5 @@
             <td><input class="form-control" name="result" id="result" [(ngModel)]="transaction.result" type="text" required></td>
         </tr>
     </table>
-    <button class="button" (click)="addTransaction()">Add Row</button> -->
+    <button class="button" (click)="addTransaction()">Add Row</button>
 </form>
