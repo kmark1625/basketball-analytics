@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { TransactionFormComponent } from './transaction-form/transaction-form.component';
 
 import { MatTableModule, MatDatepickerModule, MatNativeDateModule, MatIconModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { ResultsComponent } from './results/results.component';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MatTableModule, MatDatepickerModule, MatNativeDateModule, MatIconModule
     TeamsComponent,
     TitleComponent,
     TrackingComponent,
-    TransactionFormComponent
+    TransactionFormComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { MatTableModule, MatDatepickerModule, MatNativeDateModule, MatIconModule
     MatNativeDateModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    GoogleChartsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
