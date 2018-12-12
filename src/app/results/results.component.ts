@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TransactionStore } from '../transaction.store';
+import { Transaction } from '../transaction';
 
 @Component({
   selector: 'app-results',
@@ -7,17 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  private data;
+
+  constructor(private transactionStore: TransactionStore) { }
 
   ngOnInit() {
+      this.getTransactions();
   }
 
-  data = [
-    [1, 100],
-    [2, 200],
-    [3, 300],
-    [4, 400]
-  ];
+  getTransactions(): void {
+      this.transactionStore.transactions$
+        .subscribe(transactions => {
+            console.log("Receiving new transactions: " + transactions);
+            this.parseTransactionData(transactions);
+        })
+  }
+
+  parseTransactionData(transactions: Transaction[]): void {
+      var result = [];
+      var rollingSum: number = 0;
+      transactions.forEach(function(transaction) {
+        rollingSum += transaction.result;
+        result.push([transaction.date, rollingSum])
+      });
+      this.data = result;
+  }
 
   columnNames = ['Date', 'Total']
 
