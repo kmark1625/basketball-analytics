@@ -101,5 +101,45 @@ export const TRANSACTIONS: Transaction[] = [
         spread: 1.5,
         outcome: "win",
         result: 10
+    },
+    {
+        date: new Date("December 12, 2018"),
+        team1: TEAMS[16],
+        team2: TEAMS[11],
+        ratio: -110,
+        units: 10,
+        spread: -.5,
+        outcome: "loss",
+        result: -11
+    },
+    {
+        date: new Date("December 12, 2018"),
+        team1: TEAMS[9],
+        team2: TEAMS[27],
+        ratio: -110,
+        units: 30,
+        spread: -7,
+        outcome: "loss",
+        result: -33
+    },
+    {
+        date: new Date("December 13, 2018"),
+        team1: TEAMS[10],
+        team2: TEAMS[13],
+        ratio: -110,
+        units: 50,
+        spread: -5.5,
+        outcome: "win",
+        result: 50
+    },
+    {
+        date: new Date("December 14, 2018"),
+        team1: TEAMS[27],
+        team2: TEAMS[24],
+        ratio: -110,
+        units: 15,
+        spread: -2,
+        outcome: "loss",
+        result: -16.5
     }
 ];
