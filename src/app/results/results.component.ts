@@ -9,7 +9,7 @@ import { Transaction } from '../transaction';
 })
 export class ResultsComponent implements OnInit {
 
-  private data;
+  public data;
 
   constructor(private transactionStore: TransactionStore) { }
 

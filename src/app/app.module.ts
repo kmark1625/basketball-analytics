@@ -11,7 +11,13 @@ import { TrackingComponent } from './tracking/tracking.component'
 import { FormsModule } from '@angular/forms';
 import { TransactionFormComponent } from './transaction-form/transaction-form.component';
 
-import { MatTableModule, MatDatepickerModule, MatNativeDateModule, MatIconModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatTableModule } from '@angular/material/table';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule} from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { ResultsComponent } from './results/results.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 
@@ -32,8 +38,9 @@ import { GoogleChartsModule } from 'angular-google-charts';
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatIconModule,
     MatFormFieldModule,
+    MatSelectModule,
+    MatIconModule,
     MatInputModule,
     GoogleChartsModule.forRoot()
   ],
